@@ -1,22 +1,3 @@
-# Copyright (C) 2018 - 2020 MrYacha. All rights reserved. Source code available under the AGPL.
-
-# Copyright (C) 2020 - 2021 Shadow
-# Copyright (C) 2020 - 2021 Deshadeeth Thisarana
-
-# This file is part of Shadow (Telegram Bot)
-
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU Affero General Public License as
-# published by the Free Software Foundation, either version 3 of the
-# License, or (at your option) any later version.
-
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU Affero General Public License for more details.
-
-# You should have received a copy of the GNU Affero General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import random
 from contextlib import suppress
@@ -46,12 +27,12 @@ def help_markup(modules):
 
 
 STICKERS = (
-    "CAACAgUAAxkBAAIDPmFdrtdKL1wpUzLNpCUfcqK-pbkwAAKbBAACgSHoVgdJ3n3-7qLmHgQ",
-    "CAACAgUAAxkBAAIDPWFdru8XofWwx-rqfBMkW79YImgXAALNAwACUWzgVuYmv6itR5KaHgQ",
-    "CAACAgUAAxkBAAIDPGFdrv1FrmAU4jO_WOQAAWl1ct23LAACvgQAAiZr6Fba8sBFz48RhB4E",
-    "CAACAgUAAxkBAAIDO2FdrymTK7_8xIhz16JVfTQdIb83AALuAwACprvpVkp3sA_NBVgWHgQ",
-    "CAACAgUAAxkBAAIDOmFdrza48kuxEtJUeR2G6-A1nT4RAAJVAwACUaToVjA7G67xgpIVHgQ",
-    "CAACAgUAAxkBAAIDOWFdr0AUlj9duTsga4yqZYSPQXRFAAIRBAACsqXhVi5n-AsTE5aJHgQ",
+    "CAACAgUAAx0CXmiEIwABBuIlYd0ko7QzkD4Fh0cpoF9vv430O8wAApwFAAJzKvBW5MNQbHRHHsYjBA",
+    "CAACAgUAAx0CZIGLJgACooZh3SQ5wXIEsAGxOQxujjoxXzDBXQACmgUAAnMq8FbGLessTottuiME",
+    "CAACAgUAAx0CZIGLJgACooZh3SQ5wXIEsAGxOQxujjoxXzDBXQACmgUAAnMq8FbGLessTottuiME",
+    "CAACAgUAAx0CXmiEIwABBuIlYd0ko7QzkD4Fh0cpoF9vv430O8wAApwFAAJzKvBW5MNQbHRHHsYjBA",
+    "CAACAgUAAx0CZIGLJgACooZh3SQ5wXIEsAGxOQxujjoxXzDBXQACmgUAAnMq8FbGLessTottuiME",
+    "CAACAgUAAx0CXmiEIwABBuIlYd0ko7QzkD4Fh0cpoF9vv430O8wAApwFAAJzKvBW5MNQbHRHHsYjBA",
 )
 
 
@@ -78,21 +59,21 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
         InlineKeyboardButton(
-            strings["btn_source"], url="https://github.com/TeamOfShadow/"
+            text="Owner", url="https://t.me/NISHU_OP_OFFICIAL"
         ),
     )
     buttons.add(
         InlineKeyboardButton(
-            strings["btn_channel"], url="https://t.me/ShadowBotUpdates"
+            text="Supporter", url="https://t.me/True_lover_xd"
         ),
         InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/ShadowSupport_Official"
+            text="✩OFFICIAL GROUP☆", url="https://t.me/The_Brothers_Group"
         ),
     )
     buttons.add(
         InlineKeyboardButton(
-            "➕ Add Shadow to your group ➕",
-            url=f"https://telegram.me/Mr_Shadow_Robot?startgroup=true",
+            "➕ Add Brother Bot To Your Group ➕",
+            url=f"https://telegram.me/BROTHERS_OPBOLTE_BOT?startgroup=true",
         )
     )
     # Handle error when user click the button 2 or more times simultaneously
@@ -135,7 +116,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text=text, url="https://t.me/Mr_Shadow_Robot?start=help")
+        InlineKeyboardButton(text=text, url="https://t.me/BROTHERS_OPBOLTE_BOT?start=help")
     )
     await message.reply(strings["help_header"], reply_markup=button)
 
