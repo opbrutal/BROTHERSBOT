@@ -51,7 +51,7 @@ async def ytmusic(client, message: Message):
     global dl_limit
     if dl_limit >= 5:
         await message.reply_text(
-            "Shadow's server busy due to too many downloads, try again after sometime."
+            "Server busy due to too many downloads, try again after sometime."
         )
         return
     pablo = await client.send_message(
